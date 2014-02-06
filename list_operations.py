@@ -32,7 +32,7 @@ def last(input_list):
 
 def init(input_list):
     """Return all elements of the input list except the last."""
-    return input_list[:len(input_list)-1]
+    return input_list[:-1]
 
 def first_three(input_list):
     """Return the first three elements of the input list."""
@@ -40,13 +40,13 @@ def first_three(input_list):
 
 def last_five(input_list):
     """Return the last five elements of the input list."""
-    return input_list[len(input_list)-5:]
+    return input_list[-5:]
 
 def middle(input_list):
     """Return all elements of the input list except the first two and the last
     two.
     """
-    return input_list[2:len(input_list)-2]
+    return input_list[2:-2]
 
 def inner_four(input_list):
     """Return the third, fourth, fifth, and sixth elements of the input list."""
@@ -56,7 +56,7 @@ def inner_four_end(input_list):
     """Return the sixth, fifth, fourth, and third elements from the end of the
     list, in that order.
     """
-    return input_list[6:2:-1]
+    return input_list[-6:-2:]
 
 def replace_head(input_list):
     """Replace the head of the input list with the value 42."""
@@ -65,7 +65,7 @@ def replace_head(input_list):
 def replace_third_and_last(input_list):
     """Replace the third and last elements of the input list with the value 37."""
     input_list[2] = 37
-    input_list[len(input_list)-1] = 37
+    input_list[-1] = 37
 
 def replace_middle(input_list):
     """Replace all elements of the input list with the the values 42 and 37, in
@@ -75,13 +75,14 @@ def replace_middle(input_list):
 
 def delete_third_and_seventh(input_list):
     """Remove the third and seventh elements of the input list."""
-    pass
+    del input_list[6]
+    del input_list[2]
 
 def delete_middle(input_list):
     """Remove all elements from the input list except for the first two and the
     last two.
     """
-    pass
+    del input_list[2:-2]
 
 """
 Part 2: Derived operations on lists

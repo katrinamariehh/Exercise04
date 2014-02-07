@@ -159,6 +159,12 @@ def custom_reverse(input_list):
         input_list[i:i] = [last_item]
         i += 1
 
+    #for i in range((len(animals)/2)):
+        #endangeredspecies = animals[i]
+        #animals[i] = animals[-i-1]
+        #animals[-i-1] = endangeredspecies
+        #i += 1    
+
 
 def custom_contains(input_list, value):
     """custom_contains(input_list, value) imitates (value in input_list)"""

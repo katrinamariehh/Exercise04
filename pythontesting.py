@@ -17,10 +17,24 @@ animals = ['pig', 'horse', 'narwhals', 'elephants', 'unicorns', 'balloonicorns',
 #        else: 
 #            print "Not a horse"
 
+#print animals
+
+#deleters = len(animals)
+#animals.extend(animals[::-1])
+#del animals[0:deleters]
+
 print animals
 
-deleters = len(animals)
-animals.extend(animals[::-1])
-del animals[0:deleters]
+#for i in range(len(animals)):
+   # last_animal = animals.pop()
+  #  animals[i:i] = [last_animal]
+ #   i += 1
+#print animals
+
+for i in range((len(animals)/2)):
+    endangeredspecies = animals[i]
+    animals[i] = animals[-i-1]
+    animals[-i-1] = endangeredspecies
+    i += 1
 
 print animals

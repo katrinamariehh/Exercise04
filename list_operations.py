@@ -131,11 +131,15 @@ def custom_remove(input_list, value):
 
 def custom_pop(input_list):
     """custom_pop(input_list) imitates input_list.pop()"""
-    pass
+    value = input_list[-1]
+    del input_list[-1]
+    return value
 
 def custom_index(input_list, value):
     """custom_index(input_list, value) imitates input_list.index(value)"""
-    pass
+    for i in range(custom_len(input_list)):
+        if input_list[i] == value:
+            return i
 
 def custom_count(input_list, value):
     """custom_count(input_list, value) imitates input_list.count(value)"""

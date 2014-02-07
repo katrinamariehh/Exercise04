@@ -151,9 +151,14 @@ def custom_count(input_list, value):
 
 def custom_reverse(input_list):
     """custom_reverse(input_list) imitates input_list.reverse()"""
-    deleters = custom_len(input_list)
-    custom_extend(input_list, input_list[::-1])
-    del input_list[0:deleters]
+    # deleters = custom_len(input_list)
+    # custom_extend(input_list, input_list[::-1])
+    # del input_list[0:deleters]
+    for i in range(custom_len(input_list)):
+        last_item = custom_pop(input_list)
+        input_list[i:i] = [last_item]
+        i += 1
+
 
 def custom_contains(input_list, value):
     """custom_contains(input_list, value) imitates (value in input_list)"""
